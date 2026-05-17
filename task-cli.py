@@ -42,6 +42,7 @@ if command == "add":
 
     print(f"Task added successfully (ID: {new_task['id']})")
 elif command == "list":
-    print("Listing tasks...")
+    for task in tasks:
+      print(f"{task['id']}: {task['description']} [{task['status']}]")
 else:
     print("Unknown command")
